@@ -5,83 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Varsh-login</title>
     <link rel="stylesheet" href="./index.css">
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
-    <section class="navigation">
-        <div class="nav-container">
-          <div class="company">
-            <img src="image 17.png" alt="Varsh services" height="55px">
-          </div>
-          <nav>
-            <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
-            <ul class="nav-list">
-              <li>
-                <a href="#!">Home</a>
-              </li>
-              <li>
-                <a href="#!">Status</a>
-              </li>
-              <li>
-                <a href="#!">Profile</a>
-              </li>
-              <li>
-               <a href="#!"> <button class="btn"><i> Logout </i></button></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-
-    <br>
-
-    <!-- CLock html -->
-    <div class="canvas">
-        <div class="center">
-            <span class="timerDisplay" id="display">00 : 00 : 00</span>
-             <div class="buttons">
-                <button class="buttonPlay" id="startTimer">Clock-In</button>
-                <button class="buttonReset" id="resetTimer">Clock-Out</button>
-              </div>
+    <div class="login-wrap">
+        <div class="login-html">
+            <img src="./assets/WhatsApp Image 2022-04-20 at 4.18.10 PM.jpeg" alt="logo" class="logo"><br>
+            <input id="tab-1" type="radio" name="tab" required class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" required class="sign-up"><label for="tab-2" class="tab"></label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <button value="Sign In" class="button" type="submit">Sign In</button>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">Forgot Password?</a>
+                        <p>*If you don't have an account yet, please contact HR</p>
+                    </div>
+                </div>
+               
+                    <div class="hr"></div>
+                   
+                </div>
+            </div>
         </div>
     </div>
-<script src="clock.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-    (function($) { 
-        $(function() { 
-      
-          //  open and close nav 
-          $('#navbar-toggle').click(function() {
-            $('nav ul').slideToggle();
-          });
-      
-      
-          // Hamburger toggle
-          $('#navbar-toggle').on('click', function() {
-            this.classList.toggle('active');
-          });
-      
-      
-          // If a link has a dropdown, add sub menu toggle.
-          $('nav ul li a:not(:only-child)').click(function(e) {
-            $(this).siblings('.navbar-dropdown').slideToggle("slow");
-      
-            // Close dropdown when select another dropdown
-            $('.navbar-dropdown').not($(this).siblings()).hide("slow");
-            e.stopPropagation();
-          });
-      
-      
-          // Click outside the dropdown will remove the dropdown class
-          $('html').click(function() {
-            $('.navbar-dropdown').hide();
-          });
-        }); 
-      })(jQuery); 
-      </script>
+    
 </body>
-
 </html>
